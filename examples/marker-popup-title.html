@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- load leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+
+    <style>
+
+      body {
+        margin:0;
+        padding:0;
+      }
+
+      #map {
+        position:absolute;
+        top:0;
+        bottom:0;
+        width:100%;
+      }
+
+      .title {
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .popup {
+        width: 700px;
+      }
+
+      .leaflet-popup-content {
+        width: inherit !important;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <div id="map"></div>
+
+    <script>
+
+      var map = L.map('map').setView([42.875551, -78.869219], 16);
+
+      var basemap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      });
+
+      map.addLayer(basemap);
+
+      var marker = L.marker([42.875551, -78.869219]).addTo(map);
+
+      var popupContent = '<p class="title" style="font-size: 50px">Making an Interactive Map with Leaflet</p>' +
+                         '<p class="title" style="font-size: 20px">Haoliang Yu</p>' +
+                         '<p class="title" style="font-size: 20px">BuffaloJS, December 2016</p>';
+
+      var popup = L.popup({
+        autoClose: false,
+        closeButton: false,
+        className: 'popup'
+      })
+      .setLatLng([42.8763, -78.869219])
+      .setContent(popupContent)
+      .openOn(map);
+
+    </script>
+
+
+  </body>
+</html>
