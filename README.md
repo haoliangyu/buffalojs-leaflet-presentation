@@ -1,6 +1,6 @@
 # intro-to-leaflet
 
-A tech talk at BuffaloJS about mapping with Leaflet.
+A tech talk at BuffaloJS about geographic data and mapping with Leaflet
 
 **[Open the slides at your browser](https://haoliangyu.github.io/intro-to-leaflet)**!
 
