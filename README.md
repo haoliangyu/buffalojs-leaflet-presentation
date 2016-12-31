@@ -28,4 +28,4 @@ A lot of companies provide commercial routing service: Google, ESRI, Here Map, M
 
 ## More Questions?
 
-If you have more questions about mapping and leaflet, feel free to email me with <haolaing.yu@outlook.com>.
+If you have more questions about mapping and leaflet, feel free to email me with haolaing.yu AT outlook.com.
